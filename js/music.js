@@ -3,10 +3,10 @@
 
   var URLS = [
     'https://www.youtube.com/watch?v=5EazGCA1ydk',                  'https://www.youtube.com/watch?v=NaR2l0JXQas',
-    'https://vimeo.com/17103269',
-    'https://soundcloud.com/decemberavenue/breatheagain',
-    'http://www.youtube.com/watch?v=PNIR6jJTlJw',
-    'https://vimeo.com/35017675'
+    'https://www.youtube.com/watch?v=-KRe61NpaTA',
+    'https://www.youtube.com/watch?v=9GJJMZjISmY',
+    'https://www.youtube.com/watch?v=eh17foTBGmg',
+    'https://www.youtube.com/watch?v=Bz2YJ7yyuL8'
   ];
 
   var $tracks = $('#tracks'),
@@ -58,7 +58,7 @@
                 '</div>',
                 '<div class="large-9 medium-9 small-9 columns">',
                   '<h4>'+obj.title+'</h4>',
-                  '<p>'+obj.description+'</p>',
+                  //'<p>'+obj.description+'</p>',
                 '</div>',
               '</div>',
               '<div class="iframe">'+obj.html+'</div>',
