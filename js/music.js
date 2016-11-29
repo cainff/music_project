@@ -17,12 +17,13 @@ var music=document.getElementById('btn_test');
 /*global jQuery:true, playerjs:true, $Player:true */
 (function($, document, window){
 
-  var URLS = [
-    'https://www.youtube.com/watch?v=H_AbU24v4EU&list=TLGG-MN34pVPZgMyOTExMjAxNg',                  'https://www.youtube.com/watch?v=NaR2l0JXQas',
+  var booba = [
+    'https://www.youtube.com/watch?v=H_AbU24v4EU&list=TLGG-MN34pVPZgMyOTExMjAxNg',                  
+      'https://www.youtube.com/watch?v=NaR2l0JXQas',
     'https://www.youtube.com/watch?v=-KRe61NpaTA',
     'https://www.youtube.com/watch?v=9GJJMZjISmY',
     'https://www.youtube.com/watch?v=eh17foTBGmg',
-    'https://www.youtube.com/watch?v=Bz2YJ7yyuL8'
+    'https://www.youtube.com/watch?v=Bz2YJ7yyuL8',
   ];
 
   var $tracks = $('#tracks'),
@@ -56,14 +57,14 @@ var music=document.getElementById('btn_test');
   // We need to wait for all the players to be ready before we go.
   var onReady = function(){
     count++;
-    if (count === URLS.length){
+    if (count === booba.length){
       start();
     }
   };
 
   $(document).on('ready', function(){
     // Go get all the URLS from embedly and then embed them.
-    $.embedly.oembed(URLS, {query:{better: true} })
+    $.embedly.oembed(booba, {query:{better: true} })
       .done(function(results){
         $.each(results, function(i, obj){
           $tracks.append(['<li class="track">',
@@ -96,3 +97,37 @@ var music=document.getElementById('btn_test');
   });
 
 })(jQuery, document, window);
+
+$("#btn_test2" ).click(function() {
+    $("ul").empty();
+    
+});
+
+
+
+
+//Second playlist// 
+
+/*function playlist2(){
+    if ($('#tracks').hasClass('hide_')){
+        $('#tracks').removeClass('hide_');
+    } else {    
+        $('#tracks').addClass('hide_');
+    }
+};  
+
+
+var music=document.getElementById('btn_test2');
+    music.addEventListener('click',playlist2); 
+
+(function($, document, window){
+
+var play2 = [
+    'https://www.youtube.com/watch?v=wku7zvDDRk0',                  'https://www.youtube.com/watch?v=zeM2NhQe7hQ',
+    'https://www.youtube.com/watch?v=1E0WjtMrWKk',
+    'https://www.youtube.com/watch?v=XsHbV4gG3M4',
+    'https://www.youtube.com/watch?v=S3cB7Vj0gtQ',
+    'https://www.youtube.com/watch?v=Tk20thb6z-g',
+  ];
+    */
+
