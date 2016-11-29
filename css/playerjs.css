@@ -147,12 +147,12 @@ a {
         background: black; }
   .controls .loop {
     color: red;
-    margin-left: 5px;
-    float: left; }
+    margin-left: 50px;
+      float: left; }
     .controls .loop.looped {
       color: red; }
   .controls .next, .controls .previous {
-    margin-left: 5px; }
+    margin-left: 45px; }
     .controls .next.disable, .controls .previous.disable {
       color: red; }
 
@@ -312,8 +312,42 @@ body.soundboard #boards {
       display: block; }
 
 body.scroll .scroll-box {
-    margin: 4em 0; 
+    margin: 4em 0;     
     
 }
 
-/*# sourceMappingURL=playerjs.css.map */
+/*# CSS by me */
+
+.player_div {
+    margin: 0 auto;
+    width: 95%;
+    height: 15%;
+    position:relative;
+    margin-top:10px;
+}
+
+.row_player {
+    width: 135%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5rem;
+}
+
+ul {
+    width: 40%;
+    left: 46%;
+    position: relative;
+    /* animation: 1s linear; */
+    -webkit-transition: all 3s linear;
+
+}
+
+ul:hover {
+    left:0%;    
+}
+
+.progress_bar {
+    width: 60%;
+}
