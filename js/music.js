@@ -1,3 +1,19 @@
+/**Button test**/
+
+function playlist(){
+    if ($('#tracks').hasClass('hide_')){
+        $('#tracks').removeClass('hide_');
+    } else {    
+        $('#tracks').addClass('hide_');
+    }
+};
+
+
+var music=document.getElementById('btn_test');
+    music.addEventListener('click',playlist); 
+
+
+
 /*global jQuery:true, playerjs:true, $Player:true */
 (function($, document, window){
 

@@ -336,17 +336,29 @@ body.scroll .scroll-box {
 }
 
 ul {
-    width: 40%;
-    left: 46%;
-    position: relative;
+width: 40%;
+    left: 64%;
+    position: absolute;
     /* animation: 1s linear; */
     -webkit-transition: all 3s linear;
+    margin-left: 0px;
 
 }
 
-ul:hover {
+/**ul:hover {
     left:0%;    
+}**/    
+
+.test {
+    width: 131px;
+    height: 25px;
+    border: 1px solid;
 }
+
+.hide_ {
+    left: 100%;
+    -webkit-transition: all 3s linear;
+    /* position: relative; */}
 
 .progress_bar {
     width: 60%;
