@@ -1,49 +1,3 @@
-
-
-
-
-var hamburger = (function(w, t) {
-  window.addEventListener('load', function n(event) {
-    window.removeEventListener('load', n, false);
-    t.addEventListener('click', function(event) {
-      t.classList.toggle('clicked');
-    }, false);
-  });
-})(window, document.getElementsByClassName('hamburger')[0]);
-
-
-
-var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        
-        freeMode: true,
-        autoplay: 2000   
-    });
-
-
-
-
-$('.search').click(function(){
-  $('.search, .search-bar').toggleClass('active');
-  $('input').focus();
-});
-
-
-var swiper2 = new Swiper('.swiper-container2', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 3,
-        paginationClickable: true,
-        freeMode: true,
-        width: 1100
-        
-        
-    });    
-
-//Player
-
 //Create button play 
 
 function playplause(audioPlayer, control){
@@ -184,7 +138,7 @@ function getmusic(folder){
                     _counter++;  
                   },
                   onSuccess: function(tag) {
-                    //  console.log(mp3);
+                     console.log(mp3);
                     var tags = tag.tags;
 
                     var output = [
@@ -226,61 +180,8 @@ function toggle(){
 };
 
 
-$('#nekfeu_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
 
-$('#seth').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#pnl_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#coldplay_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#gradur_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#fakear_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#weekn_').click(function(){
+$('#next_').click(function(){
         toggle();
         event.preventDefault(); 
    $('ul#thelist').empty();

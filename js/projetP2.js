@@ -1,7 +1,3 @@
-
-
-
-
 var hamburger = (function(w, t) {
   window.addEventListener('load', function n(event) {
     window.removeEventListener('load', n, false);
@@ -13,34 +9,10 @@ var hamburger = (function(w, t) {
 
 
 
-var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        
-        freeMode: true,
-        autoplay: 2000   
-    });
-
-
-
-
 $('.search').click(function(){
   $('.search, .search-bar').toggleClass('active');
   $('input').focus();
 });
-
-
-var swiper2 = new Swiper('.swiper-container2', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 3,
-        paginationClickable: true,
-        freeMode: true,
-        width: 1100
-        
-        
-    });    
 
 //Player
 
@@ -188,18 +160,17 @@ function getmusic(folder){
                     var tags = tag.tags;
 
                     var output = [
-                        '<a href="'+mp3+'">',
-                            '<h4>'+tags.artist+'</h4>',
-                            '<h5 id="title_song">'+tags.title+'</h5>',
-                            '<h6>'+tags.album+'</h6>',
+                        '<a href="'+mp3+'">','<p class="number2">'+tags.track+'</p>','<img class="play1" src="../img/play.png" alt="">','<p class="titre1_">'+tags.title+'</p>','<p class="duration">'+tags.year+'</p>',
                         '</a>'
                     ].join('');
 
 
-                    var newline = document.createElement('li');
+                    var newline = document.createElement('div');
                     newline.innerHTML = output
+                    
+                    console.log(output);
 
-                    document.getElementById('thelist').appendChild(newline); 
+                    document.getElementById('listM').appendChild(newline); 
                     
                     _counter++;
 
@@ -212,82 +183,15 @@ function getmusic(folder){
     });
 }
 
-function toggle(){
-    if ($('#thelist').hasClass('hide_')){
-        $('#thelist').removeClass('hide_').addClass('show_');
-        
-    } else if ($('#thelist').hasClass('show_')){ 
-        $('#thelist').addClass('hide_').removeClass('show_');
-    }
-    else {
-        $('#thelist').addClass('show_', 15000, "easeOutBounce").removeClass('hide_');
-}
-    
-};
 
 
-$('#nekfeu_').click(function(){
-        toggle();
+$('#play_album').click(function(){
         event.preventDefault(); 
-   $('ul#thelist').empty();
     var folder = $(this).attr('data-getmusic');
     getmusic(folder); 
     
 });
 
-$('#seth').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#pnl_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#coldplay_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#gradur_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#fakear_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
-
-$('#weekn_').click(function(){
-        toggle();
-        event.preventDefault(); 
-   $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
 
 /*function toggle(){
     if ($('#thelist').hasClass('hide')){
@@ -298,14 +202,6 @@ $('#weekn_').click(function(){
 }; */
 
 
-$('#next__').click(function(){
-    toggle();
-    event.preventDefault(); 
-    $('ul#thelist').empty();
-    var folder = $(this).attr('data-getmusic');
-    getmusic(folder); 
-    
-});
 
 
 
@@ -318,8 +214,8 @@ function init(){
     var player = document.querySelector('#audioPlayer');
 
     current = 0;
-    playlist = $('#thelist');
-    tracks = playlist.find('li a');
+    playlist = $('#listM');
+    tracks = playlist.find('a');
     len = tracks.length - 1;
     player.play();
     playlist.find('a').click(function(e){
@@ -339,34 +235,13 @@ function init(){
         run($(link),player);
     });
 }
+
 function run(link, player){
         player.src = link.attr('href');
         par = link.parent();
-        par.addClass('active').siblings().removeClass('active');
+        par.addClass('active2').siblings().removeClass('active2');
         player.load();
         player.play();
 }
-
-
-$(window).scroll(function(){
-//box one
-    var $win = $(window);
-    $('#player_style').css('top', 20 -$win.scrollTop());
-    $('#player_style').css('left', 20 -$win.scrollLeft());
-});
-
-
-
-
-
-
- 
-
-
-//Write ID3 Tag in div  '<h4>'+tags.artist+'</h4>' + '<h5>'tags.title'</h5>' + '<h6>'tags.album'</h6>';
-
-
-//$("#thelist").html("lol");
-
 
 
