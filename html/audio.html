@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/audio.css">
+        <script src="/js/jsmediatags.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="player_style">
+    
+    <audio id="audioPlayer" preload="auto" ontimeupdate="update(this)"> 
+ 
+     
+    </audio>
+    
+   
+    
+   
+    <div id="progressBarControl">
+        <div id="progressBar" onclick="clickProgress('audioPlayer', this, event)"></div>
+    </div> 
+    <span id="progressTime">00:00</span>
+   
+    
+    <button id="btn-play" class="control play_btn" onclick="play('audioPlayer', this)"></button>
+    <button class="control stop_btn" onclick="resume('audioPlayer')"></button>
+    
+   <span class="volume">
+        <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
+        <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
+        <a class="stick3" onclick="volume('audioPlayer', 0.5)"></a>
+        <a class="stick4" onclick="volume('audioPlayer', 0.7)"></a>
+        <a class="stick5" onclick="volume('audioPlayer', 1)"></a>
+    </span>
+
+    </div>
+    
+    <div class="wrap">        
+    <ul id="thelist" class="list hide_"></ul>
+    
+    <a id="next_" data-getmusic="music">Next</a>
+    <a id="next__" data-getmusic="playlist2">Next</a>
+    </div>
+    
+ 
+    
+    
+    <script src="/js/audio.js"></script>
+</body>
+</html>
