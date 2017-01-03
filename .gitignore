@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+=======
+node_modules
+wireframe
+music
+pnl
+>>>>>>> develop
 coldplay
 fakear
 gradur
 jul
 justice
 mome
+<<<<<<< HEAD
 music
 node_modules
 pnl
@@ -11,15 +19,30 @@ sethgueko
 theweeknd
 wireframe
 
+=======
+sethgueko
+theweeknd
+
+/node_modules
+/wireframe
+/music
+/pnl
+>>>>>>> develop
 /coldplay
 /fakear
 /gradur
 /jul
 /justice
 /mome
+<<<<<<< HEAD
 /music
 /node_modules
 /pnl
 /sethgueko
 /theweeknd
 /wireframe
+=======
+/sethgueko
+/theweeknd
+
+>>>>>>> develop
