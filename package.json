@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "test",
   "version": "1.0.0",
   "description": "",
@@ -14,4 +15,21 @@
     "read-stream": "^2.1.1",
     "socket.io": "^1.7.1"
   }
+=======
+    "name": "music-project",
+    "version": "1.0.0",
+    "description": "Node Express test",
+    "keywords": [],
+    "dependencies": {
+        "express": "~4.13.4"
+    },
+    "devDependencies": {
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "main": "musicProject.js",
+    "author": "SombreDevAgency",
+    "license": "ISC",
+>>>>>>> 4ac9c18b604ca34a88fb137b0f22a22ef505a8db
 }
